@@ -8,18 +8,30 @@ public class Main
         String playA = "";
         String playB = "";
         String play = "";
+        boolean done = false;
 
         do { //Looping the whole program
 
             do { //Looping until Player A inputs R,P,S
                 System.out.println("Player A enter your move [R,P,S]: ");
                 playA = sc.nextLine();
-            } while (!playA.equalsIgnoreCase("R") && !playA.equalsIgnoreCase("P") && !playA.equalsIgnoreCase("S"));
+                if (playA.equalsIgnoreCase("R") || playA.equalsIgnoreCase("P") || playA.equalsIgnoreCase("S")){
+                    done = true;
+                } else {
+                    System.out.println("\nInvalid move! Try again with [R,P,S]: ");
+                }
+            } while (!done);
 
+            done = false;
             do { //Looping until Player B inputs R,P,S
                 System.out.println("Player B enter your move [R,P,S]: ");
                 playB = sc.nextLine();
-            } while (!playB.equalsIgnoreCase("R") && !playB.equalsIgnoreCase("P") && !playB.equalsIgnoreCase("S"));
+                if (playB.equalsIgnoreCase("R") || playB.equalsIgnoreCase("P") || playB.equalsIgnoreCase("S")){
+                    done = true;
+                } else {
+                    System.out.println("\nInvalid move! Try again with [R,P,S]: ");
+                }
+            } while (!done);
 
 
                 if (playA.equalsIgnoreCase("R")) {
