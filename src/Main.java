@@ -10,7 +10,7 @@ public class Main
         String play = "";
         boolean done = false;
 
-        do { //Looping the whole program
+        do { //Looping the program
 
             do { //Looping until Player A inputs R,P,S
                 System.out.println("Player A enter your move [R,P,S]: ");
